@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Implied Radar — Pre-Token Valuation and Net Capital Economics</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="mast-top">
+    <div>
+      <div class="kicker">RESEARCH NOTE · Nº 01 · CONDITIONAL VALUATION</div>
+      <h1>Implied Radar</h1>
+      <p class="subtitle">Pre-token valuation and net capital economics — what a token would be worth <em>if issued</em>, from one sealed snapshot. No launch prediction.</p>
+    </div>
+    <div class="proof" id="proofBadge" tabindex="0" role="button" aria-label="Recompute proof details">
+      <div class="proof-label">BOARD = PAGE MODEL</div>
+      <div class="proof-value" id="proofValue">CHECKING…</div>
+      <div class="proof-sub" id="proofSub">re-deriving every row from raw fields</div>
+    </div>
+  </div>
+  <div class="kpis" id="kpis"></div>
+  <div class="drill" id="drill" hidden></div>
+</header>
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-tab="radar" role="tab">01 · Pre-Token Radar</button>
+  <button class="tab" data-tab="model" role="tab">02 · Model &amp; Validation</button>
+  <button class="tab" data-tab="census" role="tab">03 · Census &amp; Methodology</button>
+</nav>
+<main>
+  <section id="tab-radar" class="tabpanel">
+    <div class="controls" id="controls"></div>
+    <div class="census-strip" id="censusStrip"></div>
+    <div class="compare-bar" id="compareBar" hidden></div>
+    <div class="table-wrap">
+      <table id="radarTable">
+        <thead><tr><th></th><th>Rank</th><th>Rank interval</th><th>Protocol</th><th>TVL</th><th>7d</th><th>Tenure</th><th>Implied P50</th><th>Band P25–P75</th><th>Break-even</th><th>Net $/hr</th><th>Verdict</th></tr></thead>
+        <tbody id="radarBody"></tbody>
+      </table>
+    </div>
+    <p class="small" id="tableNote"></p>
+  </section>
+  <section id="tab-model" class="tabpanel" hidden>
+    <div class="panel-grid">
+      <div class="panel wide" id="scatterPanel"></div>
+      <div class="panel" id="validationPanel"></div>
+      <div class="panel" id="gatePanel"></div>
+      <div class="panel" id="categoryPanel"></div>
+      <div class="panel" id="elasticPanel"></div>
+      <div class="panel" id="sensitivityPanel"></div>
+    </div>
+    <div class="panel" id="refPanel"></div>
+  </section>
+  <section id="tab-census" class="tabpanel" hidden>
+    <div class="panel-grid">
+      <div class="panel wide" id="censusPanel"></div>
+      <div class="panel" id="assumpPanel"></div>
+      <div class="panel" id="gasPanel"></div>
+      <div class="panel wide" id="methodPanel"></div>
+    </div>
+  </section>
+</main>
+<aside class="drawer" id="drawer" hidden aria-label="Protocol detail"></aside>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
